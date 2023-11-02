@@ -4,6 +4,7 @@ const mongoose = require("mongoose");
 
 // Import Routes
 const userRoutes = require("./routes/userRoute");
+const flightRoutes = require("./routes/flightRoute");
 
 // config app
 const app = express();
@@ -15,6 +16,7 @@ app.use(express.json());
 
 // Routes Middleware
 app.use("/api/users", userRoutes);
+app.use("/api/flights", flightRoutes);
 
 // Run app
 const port = process.env.PORT || 5000;
